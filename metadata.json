@@ -1,0 +1,6 @@
+{
+  "name": "Game Turbo FPS",
+  "description": "Real-time gaming FPS counter and hardware resource monitor overlay for PUBG with collapsible gaming HUD and performance analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
