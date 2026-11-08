@@ -12,6 +12,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Unzip Project
+      run: unzip *.zip
+
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
@@ -20,12 +23,14 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      working-directory: ./game-turbo-fps-nov-8-2026-6-05-29-am
 
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+      working-directory: ./game-turbo-fps-nov-8-2026-6-05-29-am
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: app/build/outputs/apk/debug/*.apk
+        path: game-turbo-fps-nov-8-2026-6-05-29-am/app/build/outputs/apk/debug/*.apk
